@@ -17,13 +17,13 @@ app =
     <$> strOption
       ( long "text"
           <> short 't'
-          <> help "text to encode."
+          <> help "text to encode"
           <> metavar "MESSAGE"
       )
     <*> strOption
       ( long "led"
           <> short 'l'
-          <> help "Led to transmit"
+          <> help "led to transmit"
           <> showDefault
           <> value "tpacpi::lid_logo_dot"
           <> metavar "LED"
@@ -32,6 +32,7 @@ app =
       auto
       ( long "speed"
           <> short 's'
+          <> help "speed to transmit the message at"
           <> showDefault
           <> value 1500
           <> metavar "INT"

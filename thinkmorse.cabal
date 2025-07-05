@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               thinkmorse
+version:            0.1.0.0
+synopsis:           Small CLI app that helps to encode morse and control LEDs
+homepage:           https://github.com/ProggerX/thinkmorse
+license:            GPL-3.0-only
+license-file:       LICENSE
+author:             ProggerX
+maintainer:         x@proggers.ru
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:  ThinkMorse
+    other-modules:    ThinkMorse.Encoder, ThinkMorse.LED
+    build-depends:    base ^>=4.19.2.0,
+                      containers,
+                      text,
+                      optparse-applicative
+
+    hs-source-dirs:   src
+    default-language: GHC2021
+
+executable thinkmorse
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.19.2.0,
+        thinkmorse
+
+    hs-source-dirs:   app
+    default-language: GHC2021

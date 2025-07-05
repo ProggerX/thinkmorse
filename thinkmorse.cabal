@@ -16,7 +16,7 @@ library
     import:           warnings
     exposed-modules:  ThinkMorse
     other-modules:    ThinkMorse.Encoder, ThinkMorse.LED
-    build-depends:    base ^>=4.19.2.0,
+    build-depends:    base >= 4.18,
                       containers,
                       text,
                       optparse-applicative
@@ -28,7 +28,7 @@ executable thinkmorse
     import:           warnings
     main-is:          Main.hs
     build-depends:
-        base ^>=4.19.2.0,
+        base >= 4.18,
         thinkmorse
 
     hs-source-dirs:   app
